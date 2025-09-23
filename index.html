@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha Loja</title>
+<link rel="stylesheet" href="css/estilo.css">
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo">Minha Loja</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="login.html">Login Vendedor</a>
+  </nav>
+</header>
+
+<div class="banner">
+  <img src="imagens/banner.jpg" alt="Banner" class="banner-img">
+</div>
+
+<div class="categorias">
+  <button onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('camisas')">Camisas</button>
+  <button onclick="filtrar('calças')">Calças</button>
+  <button onclick="filtrar('sapatos')">Sapatos</button>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-storage-compat.js"></script>
+
+<div class="produtos" id="produtos">
+  <!-- Produtos carregados via Firebase -->
+</div>
+
+<script src="js/main.js"></script>
+<script>
+inicializarFirebase();
+carregarProdutos(); // Renderiza produtos na página principal
+</script>
+</body>
+</html>
