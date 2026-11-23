@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xadrez 2</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<header><div class="brand"><div class="brand-icon">♞</div><div><h1>XADREZ 2</h1><small>BY KLEBERIANOGAMEsTAR </small></div></div><button id="flip" class="ghost" title="Virar tabuleiro">↻ Tabuleiro</button></header>
+<main>
+<section class="game-area">
+<div class="player-bar" id="blackBar"><div class="avatar black">♚</div><div><b>Jogador das Pretas</b><small id="blackStatus">Aguardando</small></div><span class="turn-dot" id="blackDot"></span></div>
+<div class="board-frame"><div id="board" class="board" aria-label="Tabuleiro de xadrez"></div></div>
+<div class="player-bar" id="whiteBar"><div class="avatar white">♔</div><div><b>Jogador das Brancas</b><small id="whiteStatus">Aguardando</small></div><span class="turn-dot" id="whiteDot"></span></div>
+<div class="game-message" id="message">Brancas começam. Boa partida!</div>
+</section>
+<aside class="side-panel"><div class="panel-title"><span>PARTIDA</span><span class="live"><i></i> LOCAL</span></div>
+<div class="turn-card"><label>VEZ DE JOGAR</label><div class="turn-info"><span id="turnPiece">♔</span><div><strong id="turnName">Brancas</strong><small id="turnHint">Selecione uma peça</small></div></div></div>
+<div class="actions"><button id="newGame" class="primary">＋ Nova partida but</button><button id="undo" class="secondary">↶ Desfazer</button></div>
+<div class="move-box"><div class="panel-title"><span>HISTÓRICO</span><span id="moveCount">0 jogadas</span></div><div id="moves" class="moves"><p class="empty">As jogadas aparecerão aqui.</p></div></div>
+<div class="help"><strong>Como jogar</strong><p>Toque numa peça para ver seus movimentos legais e depois escolha uma casa. O jogo impede movimentos que deixem seu rei em xeque.</p></div>
+</aside>
+</main><footer>♟ <span>Peças editáveis na pasta <code>images/</code> · Offline</span></footer>
+</div>
+<div class="promotion-overlay" id="promotion" hidden><div class="promotion-card"><h2>Promoção de peão</h2><p>Escolha a peça:</p><div class="promotion-options" id="promotionOptions"></div></div></div>
+<script src="js/chess.js"></script>
+</body></html>
